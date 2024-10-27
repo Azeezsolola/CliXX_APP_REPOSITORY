@@ -48,7 +48,7 @@ variable "vpc_id"{
 }
 
 variable "ami" {
-  default = "ami-00f251754ac5da7f0"
+  default = "ami-0460b4b0a0c11a5e2"
 }
 
 
