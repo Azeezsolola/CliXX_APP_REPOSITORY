@@ -4,6 +4,7 @@
 
 #Mounting 
 #sudo yum install -y nfs-utils
+sudo systemctl start amazon-ssm-agent
 sudo mkdir -p ${MOUNT_POINT}
 sudo chown ec2-user:ec2-user ${MOUNT_POINT}
 echo "${FILE}.efs.${REGION}.amazonaws.com:/ ${MOUNT_POINT} nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev 0 0" | sudo tee -a /etc/fstab
