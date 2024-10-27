@@ -35,7 +35,12 @@ pipeline {
          stage('Terraform apply'){
               steps {
                 sh '''
-                  terraform apply -auto-approve
+                if [[ $ACTION == 'apply' ]]
+                then
+                    terraform $ACTION -auto-approve
+                else
+                    terraform $ACTION
+                fi
                 '''
               }
         }       
