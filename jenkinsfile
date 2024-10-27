@@ -39,7 +39,7 @@ pipeline {
                 then
                     terraform $ACTION -auto-approve
                 else
-                    terraform $ACTION
+                    terraform $ACTION -auto-approve
                 fi
                 '''
               }
